@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
 
     optimizer_G = torch.optim.Adam(itertools.chain(svdlut_inst.parameters()), lr=opt.lr)
-    scheduler = StepLR(optimizer_G, step_size=400, gamma=0.1)
+    scheduler = StepLR(optimizer_G, step_size=100, gamma=0.1)
 
     if opt.epoch != 0:
         # Load pretrained models
